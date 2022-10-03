@@ -1,0 +1,23 @@
+
+// вызов плейсхолдера @extend %button
+// %button {
+//     display: inline-flex;
+//     border-radius: 3px;
+//     font-size: 16px;
+//     padding: 10px 20px;
+//     color: white;
+//     background-color: gray;
+//   }
+// общий набор свойств
+
+@mixin font-primary($fs: 14px, $fw: 400, $lh: 26px) {
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh / $fs;
+}
+
+
+// вызов миксина
+// @include font-primary($fw: 500, $lh: 26px);
+// @include font()
+

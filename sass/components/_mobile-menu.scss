@@ -1,0 +1,200 @@
+@media screen and (max-width: 767px) {
+    .mobile-menu {
+        position: fixed;
+        width: 337px;
+        height: 100%;
+        // max-height: 796px;
+        z-index: 1000;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        // margin-left: 40px;
+    
+        opacity: 0;
+        visibility: hidden;
+        // transform: translateX(50%);
+        // transition: transform 0.2s;
+        pointer-events: none;
+        transition: opasity 450ms $primary-cubic, visibility 450ms $primary-cubic, transform 450ms $primary-cubic;
+    }
+    
+    .mobile-menu.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        // transform: translateX(-50%);
+        transition: transform 0.45s;
+    
+    }
+
+    .mobile-menu__container{
+        padding-top: 48px;
+        padding-left: 40px;
+
+
+       
+    }
+
+    .mobile-menu__close-btn {
+        padding: 11px;
+        position: absolute;
+
+        top: 10px;
+        right: 15px;
+
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    // margin-bottom: 30px;
+    cursor: pointer;
+
+    }
+
+    .mobile-menu__close-icon {
+        fill: $title-text-color;
+
+            &:hover,
+            &:focus {
+                fill: $accent-text-color;
+        
+        }
+
+    }
+
+
+    .menu-mobile {
+        margin-top: 30px;
+
+    }
+
+    .menu-mobile li:not(:last-child) {
+        margin-bottom: 24px;
+    
+    }
+
+    .menu-mobile__link {
+        @include font-primary($fs: 18px, $fw: 600, $lh: 24px);
+   display: block;
+        font-family: $primary-font;
+        color: $title-text-color;
+        font-style: normal;
+        letter-spacing: 0.02em;
+
+
+            &:hover,
+            &:focus {
+                color: $accent-text-color;
+       }
+
+    }
+     
+
+    .cont-mobile {
+        margin-top: 64px;
+
+       li:not(:last-child) {
+        margin-bottom: 24px;
+    
+       }
+
+       
+    }
+
+    .cont-mobile__link--tel {
+        @include font-primary($fs: 18px, $fw: 600, $lh: 24px);
+        display: block;
+             font-family: $primary-font;
+             color: $title-text-color;
+             font-style: normal;
+             letter-spacing: 0.02em;
+     
+     
+                 &:hover,
+                 &:focus {
+                     color: $accent-text-color;
+            }
+     
+    }
+
+    .button-mobile {
+        display: block;
+        margin: 0;
+    }
+
+
+    .social-mobile {
+        padding-top: 64px;
+        margin-left: 100px;
+        // display: flex;
+        // flex-wrap: wrap;
+        // flex-direction: row;
+
+        li:not(:last-child) {
+            margin-bottom: 24px;
+        
+           }
+
+           &::before {
+            content: '';
+            width: 60px;
+            height: 1px;
+            // background-color: $title-text-color;
+            background-image: url(../../images/rectangle-dark.png);
+            position: absolute;
+            left: 40px;
+            top: 475px;
+
+            
+            
+           }
+
+        //    li:first-child {
+
+            
+        //     &::before {
+        //         content: '';
+               
+        //         width: 60px;
+        //         height: 1px;
+        //         // background-color: $title-text-color;
+        //         background-image: url(../../images/rectangle-dark.png);
+        //         position: absolute;
+        //         left: 50px;
+        //         top: 50px;
+                
+        //        }
+
+        //    }
+    }
+
+
+    .social-mobile__link {
+        @include font-primary($fs: 14px, $fw: 600, $lh: 19px);
+        // display: flex;
+        // flex-grow: 2;
+             font-family: $primary-font;
+             color: $title-text-color;
+             font-style: normal;
+             letter-spacing: 0.02em;
+     
+     
+                 &:hover,
+                 &:focus {
+                     color: $accent-text-color;
+            }
+
+
+           
+    }
+
+
+}
+
+
+@media screen and (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}

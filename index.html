@@ -7,25 +7,28 @@
     <title>BarberShop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css">
-    <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
+    <link rel="stylesheet" href="./css/main.min.css">
     <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
 
     <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+
     
 </head>
 <!--присвоюємо body клас, щоб прописати основний колір тексту сайта-->
 <body> 
     <!--Шапка сайту-->
-    <header>
+    <header class="page-header container">
         <!--Навігація сайту-->
-        <div>
-
+        <div class="page-header__container">
+            <svg class="logo" width="69" height="56">
+                <use href="./images/sprite.svg#icon-logo"></use>
+              </svg>
+            <!-- <a href="./index.html" class="logo" href="./images/logo.png"  width="69" heigth="56"></a> -->
             
         <nav class="page-header__nav">
-            <a href="./index.html" class="logo" href="./images/logo.png"  width="69" heigth="56"></a>
+        
             
                 <ul class="menu list">
                     <li><a class="menu__link link" href="./index.html">О нас</a></li>
@@ -34,6 +37,12 @@
                     <li><a class="menu__link link" href="#">Контакты</a></li>
                 </ul>
         </nav>
+
+        <button type="button" class="mobile-menu-open" data-menu-open>
+            <svg class="mobile-menu-open-icon" width="40px" height="40px">
+                <use href="./images/icon/sprite.svg#icon-burger"></use>
+            </svg>
+        </button>
        
         <ul class="cont-nav list">
             <li class="cont-nav__item">
@@ -43,12 +52,64 @@
             
             </li>
             <li class="cont-nav__item">
-                <button type="button" class="mobile-menu-open">онлайн-запись</button>
+                <button type="button" class="button--dark mobile-menu-open">онлайн-запись</button>
             </li>
         </ul>
         </div>
 
        
+        </div>
+
+        <div class="mobile-menu" data-menu>
+            <div class="container mobile-menu__container">
+                <button class="button mobile-menu__close-btn" data-menu-close>
+                    <svg class="mobile-menu__close-icon" width="40" height="40">
+                        <use href="./images/sprite.svg#icon-close"></use>
+    
+                    </svg>
+                
+                </button>
+    
+                <ul class="menu-mobile list">
+                    <li><a class="menu-mobile__link link menu__link--current" href="./index.html">О нас</a></li>
+                    <li><a class="menu-mobile__link link" href="./portfolio.html">Услуги и цены</a></li>
+                    <li><a class="menu-mobile__link link" href="./portfolio.html">Мастера</a></li>
+                    <li><a class="menu-mobile__link link" href="#">Контакты</a></li>
+                    
+                </ul>
+
+
+                <ul class="cont-mobile list">
+                    <li class="cont-mobile__item">
+                       
+                        <a class="cont-mobile__link--tel link" href="tel:+380441111111">
+                            +38 044 111 11 11</a>
+                        
+                    
+                    </li>
+                    <li class="cont-mobile__item">
+                        <button type="button" class="button--light button-mobile">онлайн-запись</button>
+                    </li>
+                </ul>
+
+
+                <ul class="social-mobile list">
+                    <li class="social-mobile__item">
+                       
+                        <a class="social-mobile__link link" href="#">
+                        Instagram</a>
+                        <!-- <div class="vertical-line"></div> -->
+                    
+                    </li>
+                    <li class="social-mobile__item">
+                        <a  class="social-mobile__link link" href="#">
+                        Youtube</a>
+                    </li>
+
+                    
+                </ul>
+
+            </div>
         </div>
     </header>
     <!--Основна унікальна інформація сторінки-->
@@ -535,6 +596,8 @@
 
     <!--модальне вікно-->
 
-    
+
+    <!--скрипт джава на модальне вікно-->
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

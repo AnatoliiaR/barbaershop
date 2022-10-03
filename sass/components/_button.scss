@@ -1,0 +1,56 @@
+.button--dark {
+
+    border: 1px solid #ff6c00;
+    background-color: transparent;
+    font-family: $primary-font;
+   
+
+    @include font-primary($fs: 12px, $fw: 600, $lh: 16px);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: $primary-white-color;
+
+    border-radius: 25px;
+    padding: 12px 20px;
+    min-width: 160px;
+   
+
+    transition: background-color 250ms $primary-cubic;
+
+
+    &:hover,
+    &:focus {
+        background-color: $accent-text-color;
+    }
+}
+
+
+
+.button--light {
+
+    border: 1px  solid  rgba(255, 108, 0, 1);
+    // border-color: $accent-text-color;
+    background-color: transparent;
+    font-family: $primary-font;
+   
+
+    @include font-primary($fs: 12px, $fw: 600, $lh: 16px);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: $title-text-color;
+
+    border-radius: 25px;
+    padding: 12px 20px;
+    min-width: 160px;
+
+   
+
+    transition: background-color 250ms $primary-cubic;
+
+
+    &:hover,
+    &:focus {
+        background-color: $accent-text-color;
+        color: $primary-white-color;
+    }
+}
