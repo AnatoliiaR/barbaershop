@@ -124,7 +124,7 @@ body {
 @media screen and (max-width: 767px) {
   .mobile-menu {
     position: fixed;
-    width: 337px;
+    max-width: 337px;
     height: 100%;
     z-index: 1000;
     top: 0;
